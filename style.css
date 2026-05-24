@@ -10,7 +10,7 @@ Version: 1.0
     --OCGul: #F4CC7D;
     --OCPink: #F6A4C0;
 }
- h1,h2,h3,h4,h5,h6, a{
+ h1,h2,h3,h4,h5,h6,a{
 font-family: "Nunito", sans-serif;
     font-weight: 400;
     font-size: 3rem;
@@ -29,6 +29,7 @@ max-width: 30%;
     width: 100%;
     padding: 20px 0;
     background: #fff;
+    justify-content: center;
     
 }
 .nav-container{
