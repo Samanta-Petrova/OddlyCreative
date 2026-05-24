@@ -1,33 +1,65 @@
+/*
+Theme Name: OddlyCreative
+Author: Samanta Petrova
+Version: 1.0
+*/
+:root {
+    --OCBlue: #30A4DC;
+    --OCLilla: #6868AF;
+    --OCGreen: #66B38A;
+    --OCGul: #F4CC7D;
+    --OCPink: #F6A4C0;
+}
+ h1,h2,h3,h4,h5,h6, a{
+font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+ }
+ *{
+    font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1rem;
+ }
+.nav-container img {
+max-width: 30%;
+}
+/* NAV WRAPPER */
 .main-nav {
     width: 100%;
     padding: 20px 0;
     background: #fff;
+    
 }
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.nav-container{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-
-.main-menu {
-    list-style: none;
+.nav-container ul {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+/*
+
+/* MENU */
+
+
+.main-menu li {
+    position: relative;
 }
 
-.main-menu li a {
+.main-menu a {
     text-decoration: none;
-    color: #111;
+    font-size: 18px;
     font-weight: 500;
-    transition: 0.2s ease;
+    color: #111;
+    align-items: center;
+
 }
 
-.main-menu li a:hover {
-    color: #6A4DF4;
+/* HOVER */
+.main-menu a:hover {
+    color: #555;
 }

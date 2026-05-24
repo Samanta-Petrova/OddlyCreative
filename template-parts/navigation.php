@@ -1,11 +1,12 @@
+
 <nav class="main-nav">
     <div class="nav-container">
+        
         <a href="<?php echo home_url(); ?>" class="logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/OCLogo.png" alt="Logo">
+            <img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/OCLogo.png" alt="Oddly Creative logo">
         </a>
-    
+
         <div class="menu-wrapper">
-            <h1>hey</h1>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary',
@@ -14,5 +15,6 @@
             ));
             ?>
         </div>
+
     </div>
 </nav>
