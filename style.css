@@ -1,0 +1,33 @@
+.main-nav {
+    width: 100%;
+    padding: 20px 0;
+    background: #fff;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.main-menu li a:hover {
+    color: #6A4DF4;
+}
