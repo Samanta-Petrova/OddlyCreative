@@ -5,6 +5,7 @@
         </a>
 
         <div class="menu-wrapper">
+            <h1> hey </h1>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary',
