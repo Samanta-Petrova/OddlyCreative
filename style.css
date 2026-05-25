@@ -9,9 +9,14 @@ Version: 1.0
     --OCGreen: #66B38A;
     --OCGul: #F4CC7D;
     --OCPink: #F6A4C0;
+    --OCLightBlue: #E1F6FF;
     --MinPadding: 20px;
     --MidPadding: 30px;
     --MaxPadding: 40px;
+    --GigaPadding: 65px;
+    --Ptekst: 1.2rem;
+    --h1Tekst: 4.5rem;
+    --h3Tekst: 1.3rem;
 }
 * {
     margin: 0;
@@ -25,15 +30,57 @@ font-size: 2rem;
  body {
     font-family: "Quicksand", sans-serif;
  }
+/* General knappe design */
+.Btn-design{
+padding: 14px 60px;
+    background: var(--OCLilla);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: 0.2s ease;
+    display: inline-block;
+}
 
+.Btn-design:hover {
+    background: var(--OCBlue);
+}
+/* Generel h1 design */
+h1{
+font-size: var(--h1Tekst);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: var(--MaxPadding);
+}
+/*General h2 design*/
+h2{
+    font-size: 36px;
+    line-height: 2rem;
+    font-weight: 700;
+    padding-bottom: var(--MidPadding);
+}
+/* General p design*/
+p {
+    font-size: var(--Ptekst);
+        line-height: 2.3rem;
+        margin-bottom: var(--MidPadding);
+        max-width: 700px;
+}
+
+/* Container design */
+.container {
+    max-width: 100%;
+    padding: var(--GigaPadding);
+    align-items: center;
+}
 
 /* NAV WRAPPER */
 .main-nav {
     max-width: 90%;
     margin-top: 10px;
     padding-bottom: 10px;
-    margin-left: var(--MaxPadding);
-    margin-right: var(--MaxPadding);
+    margin-left: var(--GigaPadding);
+    margin-right: var(--GigaPadding);
     background: #fff;
 }
 .nav-container img {
@@ -46,7 +93,7 @@ font-size: 2rem;
 }
 .nav-container ul {
     display: flex;
-    gap: 20px;
+    gap: var(--MaxPadding);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -79,49 +126,56 @@ font-size: 2rem;
 .hero-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 var(--GigaPadding);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
+    height: 38.5rem;
 }
 
 /* TEXT */
-.hero-content h1 {
-    font-size: 5rem;
-    line-height: 1.1;
-    font-weight: 700;
-    margin-bottom: 20px;
+
+
+.hero-icon-pil{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hero-icon-pil img {
+    max-width: 24px;
+    height: auto;
+}
+.hero-icon-pil svg,
+.hero-icon-pil img {
+    animation: hop 1.8s ease-in-out infinite;
 }
 
-.hero-content p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
+@keyframes hop {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    /* hvor meget den hopper */
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* BUTTON */
-.hero-btn {
-    display: inline-block;
-    padding: 14px 28px;
-    background: var(--OCLilla);
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 30px;
-    transition: 0.2s ease;
-}
-
-.hero-btn:hover {
-    background: var(--OCBlue);
-}
 
 /* hero animation*/
+
 .rainbow-bg {
-    background: linear-gradient(270deg, #fff0f9, #ecebff, #f5fbf7, #faf9f3, #ffffff);
-    background-size: 1200% 1200%;
-    animation: rainbow 12s ease infinite;
+    background: linear-gradient(270deg, #fff0f9,#e5f6ff, #ecebff, #f5fbf7, #faf9f3, #fde6e6);
+    background-size: 2000% 30rem;
+    animation: rainbow 20s ease infinite;
+    
 }
 
 @keyframes rainbow {
@@ -138,42 +192,12 @@ font-size: 2rem;
     }
 }
 
-/*Intro sektion*/
-.intro-sektion {
-    padding: var(--MaxPadding) 0;
+/*Cards*/
+.cases-grid{
+    display: flex;
+    gap: 40px;
+    margin: var(--GigaPadding);
 }
-
-.intro-container {
-    max-width: 100%;
-    padding:var(--MaxPadding);
-    align-items: center;
-}
-
-.intro-container h2 {
-    font-size: 36px;
-    line-height: 1.1;
-    font-weight: 700;
-padding-bottom: var(--MidPadding);
-}
-
-.intro-container p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 700px;
-}
-
-.intro-container .hero-btn {
-    display: inline-block;
-    padding: 14px 28px;
-    background: var(--OCLilla);
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 30px;
-    transition: 0.2s ease;
-}
-
-.intro-container .hero-btn:hover {
-    background: var(--OCBlue);
+.card h3{
+    font-size: var(--h3Tekst);
 }
