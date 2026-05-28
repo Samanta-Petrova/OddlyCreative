@@ -73,6 +73,10 @@ p {
     padding: var(--GigaPadding);
     align-items: center;
 }
+.card h3 {
+    font-size: var(--h3Tekst);
+    font-weight: 700;
+}
 
 /* NAV WRAPPER */
 .main-nav {
@@ -117,7 +121,6 @@ p {
 }
 
 /*Hero*/
-/* HERO WRAPPER */
 .hero {
     width: 100%;
     padding: 120px 0;
@@ -167,10 +170,8 @@ p {
     }
 }
 
-/* BUTTON */
-
 /* hero animation*/
-
+/*
 .rainbow-bg {
     background: linear-gradient(270deg, #fff0f9,#e5f6ff, #ecebff, #f5fbf7, #faf9f3, #fde6e6);
     background-size: 2000% 30rem;
@@ -191,6 +192,85 @@ p {
         background-position: 0% 50%;
     }
 }
-
+*/
 /*Cards*/
 
+.box {
+    display: flex;
+    gap: var(--GigaPadding);
+    margin-left: var(--GigaPadding);
+    margin-right: var(--GigaPadding);
+    padding-bottom: var(--MidPadding);
+    justify-content: center;
+}
+/*
+.card{
+    background-color: var(--OCLightBlue);
+    gap: var(--MidPadding);
+    max-width: 700px;
+    height: 350px;
+    padding: var(--MidPadding);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.blob1 {
+    width: 700px;
+    aspect-ratio: 1;
+    background: url("assets/images/kanten.svg") center no-repeat;
+}
+.blob2 {
+    width: 700px;
+    aspect-ratio: 1;
+    background: url("assets/images/kantv2.svg") center  no-repeat;
+}
+.blob3 {
+    width: 700px;
+    aspect-ratio: 1;
+    background: url("assets/images/kantv3.svg") center no-repeat;
+}
+
+*/
+
+.card {
+    background-color: var(--OCLightBlue);
+    max-width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+}
+
+/* Fjern baggrund fra .blob3 – den flytter vi til ::before */
+.blob {
+    width: 700px;
+    aspect-ratio: 1;
+}
+
+/* Kanten som pseudo-element */
+.blob::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("assets/images/kantv3.svg") center/contain no-repeat;
+    z-index: 0;
+    transition: transform 4s ease;
+}
+
+/* Indholdet skal ligge over kanten */
+.blob>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Kun kanten roterer ved hover */
+.blob:hover::before {
+    transform: rotate(360deg);
+}
