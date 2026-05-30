@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
-<?php if (get_field('show_hero')): ?>
-    <?php get_template_part('template-parts/hero/hero-default'); ?>
+<?php get_template_part('template-parts/hero/hero-default'); ?>
+
+<?php if (get_field('show_cases')): ?>
+    <?php get_template_part('template-parts/cases'); ?>
 <?php endif; ?>
+

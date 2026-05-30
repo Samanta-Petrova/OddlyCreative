@@ -4,6 +4,8 @@ Template Name: Cases Template
 */
 get_header();
 ?>
+<?php get_template_part('template-parts/hero/hero-default'); ?>
+
 
 <section class="cases-list">
     <?php
