@@ -84,7 +84,14 @@ p {
     font-size: var(--h3Tekst);
     font-weight: 700;
 }
-
+/* Hero billede */
+.hero-billede img {
+   width: 500px;
+   height: 500px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-right: var(--GigaPadding);
+}
 /* NAV WRAPPER */
 .main-nav {
     max-width: 90%;
@@ -131,6 +138,7 @@ p {
 .hero {
     width: 100%;
     padding: 120px 0;
+    display: flex;
 }
 
 .hero-container {
@@ -266,29 +274,45 @@ p {
 }
 
 
-/* Fjern baggrund fra .blob3 – den flytter vi til ::before */
+.imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
 .blob {
     width: 700px;
     aspect-ratio: 1;
 }
 
-/* Kanten som pseudo-element */
+
 .blob::before {
     content: "";
     position: absolute;
     inset: 0;
     background: url("assets/images/Kurven.png") center no-repeat;
-    z-index: 0;
+    z-index: 2;
     transition: transform 4s ease;
 }
 
-/* Indholdet skal ligge over kanten */
-.blob>* {
-    position: relative;
-    z-index: 1;
-}
-
-/* Kun kanten roterer ved hover */
 .blob:hover::before {
     transform: rotate(360deg);
+} 
+.imgBx {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.cardsImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
 }

@@ -18,7 +18,13 @@
             <?php endif; ?>
         </div>
     </div>
-
+<div class="hero-billede">
+    <?php 
+    $billede = get_field('hero_billede');
+    if ($billede): ?>
+        <img src="<?php echo esc_url($billede['url']); ?>" alt="<?php echo esc_attr($billede['alt']); ?>">
+    <?php endif; ?>
+</div>
     <div class="hero-icon-pil">
         <?php 
         $pil = get_field('hero_pil');

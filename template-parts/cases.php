@@ -16,11 +16,13 @@
                 while ($cases->have_posts()): $cases->the_post();
             ?>
 
-            <a href="<?php the_permalink(); ?>" class="card blob">
+            <a href="<?php the_permalink(); ?>" class="card ">
                 <div class="imgBx">
-                    <img class="pil-ikon" 
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/pilNed.svg" 
-                         alt="Pil ikon">
+                    <div>
+                    <img class="cardsImg" 
+     src="<?php echo get_the_post_thumbnail_url(); ?>" 
+     alt="<?php the_title(); ?>">
+        </div>
                 </div>
 
                 <div class="case-card">
