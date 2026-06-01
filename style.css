@@ -3,6 +3,9 @@ Theme Name: OddlyCreative
 Author: Samanta Petrova
 Version: 1.0
 */
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --OCBlue: #30A4DC;
     --OCLilla: #6868AF;
@@ -143,7 +146,6 @@ p {
 
 .hero-container {
     max-width: 100%;
-    margin: 0 auto;
     padding: 0 var(--GigaPadding);
     display: flex;
     align-items: center;
@@ -167,9 +169,8 @@ p {
 }
 .hero-icon-pil svg,
 .hero-icon-pil img {
-    animation: hop 1.8s ease-in-out infinite;
+animation: hop 1.8s ease-in-out infinite;
 }
-
 @keyframes hop {
     0% {
         transform: translateY(0);
@@ -184,6 +185,7 @@ p {
         transform: translateY(0);
     }
 }
+
 
 /* hero animation*/
 /*
@@ -315,4 +317,84 @@ p {
     position: absolute;
     inset: 0;
     z-index: 0;
+}
+/* Wrapper */
+.wpcf7 {
+    width: 100%;
+}
+
+/* Formularen */
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Inputs */
+.wpcf7-form-control {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    background: #fff;
+    transition: 0.3s ease;
+}
+
+.wpcf7-form-control:focus {
+    border-color: #000;
+    outline: none;
+}
+
+/* Submit-knap */
+.wpcf7-submit {
+padding: 14px 60px;
+    background: var(--OCLilla);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: 0.2s ease;
+    display: inline-block;
+}
+
+.wpcf7-submit:hover {
+    background: var(--OCBlue);
+}
+
+
+/* Fejlbeskeder */
+.wpcf7-not-valid-tip {
+    color: #e63946;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+/* Succes-besked */
+.wpcf7-response-output {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+ul{
+   list-style: none;
+   padding-top: var(--MaxPadding);
+  gap: 50px;
+}
+
+ul li {
+   display: inline;
+   gap: var(--MidPadding);
+   padding-left: var(--MinPadding);
+}
+ul li a {
+   text-decoration: none;
+   font-size: 90px;
+   font-weight: 500;
+}
+.kontakt-container{
+    display: flex;
+    gap: 200px;
+    align-items: flex-start;
 }
