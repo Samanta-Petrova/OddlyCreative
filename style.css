@@ -393,8 +393,8 @@ ul li a {
    font-size: 90px;
    font-weight: 500;
 }
-.kontakt-container{
+.kontakt-container {
     display: flex;
-    gap: 200px;
+    gap: 50px;
     align-items: flex-start;
 }

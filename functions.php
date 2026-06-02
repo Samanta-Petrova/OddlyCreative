@@ -34,3 +34,14 @@ function oddlycreative_load_fontawesome() {
     );
 }
 add_action('wp_enqueue_scripts', 'oddlycreative_load_fontawesome');
+
+function oddly_scripts() {
+    wp_enqueue_script(
+        'karusel-js',
+        get_template_directory_uri() . '/assets/js/karusel.js',
+        array(),
+        false,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'oddly_scripts');

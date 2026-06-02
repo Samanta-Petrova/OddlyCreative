@@ -8,7 +8,7 @@ get_header();
 <section class="kontakt-section">
     <div class="kontakt-container">
     <div class="container" >
-       <h2>Du kan også finde os på sociale medier:</h2>
+       <h3>Du kan også finde os på sociale medier:</h3>
        <ul>
            <li><a href="#"><i class="fa-brands fa-square-facebook" style="color: #6868af;"></i></a></li>
            <li><a href="#"><i class="fa-brands fa-instagram" style="color: #6868af;"></i></a></li>
