@@ -41,7 +41,7 @@ function oddly_scripts() {
         get_template_directory_uri() . '/assets/js/karusel.js',
         array(),
         false,
-        true
+        true // loader i footer
     );
 }
 add_action('wp_enqueue_scripts', 'oddly_scripts');

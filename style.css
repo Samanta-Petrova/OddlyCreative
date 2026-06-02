@@ -398,3 +398,51 @@ ul li a {
     gap: 50px;
     align-items: flex-start;
 }
+.losninger-section {
+    padding: 80px 0;
+}
+
+.losninger-intro {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.karusel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.karusel-track {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+.karusel-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.karusel-slide-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.karusel-btn {
+    background: var(--OCLilla);
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    font-size: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.karusel-btn:hover {
+    background: var(--OCBlue);
+}

@@ -1,20 +1,29 @@
-const track = document.querySelector('.karusel-track');
-const slides = Array.from(document.querySelectorAll('.karusel-slide'));
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
+console.log('Karusel JS er loaded');
 
-let index = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    const track = document.querySelector('.karusel-track');
+    const slides = Array.from(document.querySelectorAll('.karusel-slide'));
+    const prev = document.querySelector('.karusel-btn.prev');
+    const next = document.querySelector('.karusel-btn.next');
 
-function updateKarusel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-}
+    if (!track || !slides.length || !prev || !next) {
+        console.warn('Karusel: mangler elementer');
+        return;
+    }
 
-next.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
-    updateKarusel();
-});
+    let index = 0;
 
-prev.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    updateKarusel();
+    function updateKarusel() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    next.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        updateKarusel();
+    });
+
+    prev.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateKarusel();
+    });
 });
