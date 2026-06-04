@@ -83,6 +83,7 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     gap: 100px;
 }
+
 .card h3 {
     font-size: var(--h3Tekst);
     font-weight: 700;
@@ -279,7 +280,7 @@ animation: hop 1.8s ease-in-out infinite;
 .imgBx img {
     width: 400px;
     height: 400px;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 50%;
     position: absolute;
     inset: 0;
@@ -289,7 +290,6 @@ animation: hop 1.8s ease-in-out infinite;
     width: 400px;
     aspect-ratio: 1;
 }
-
 
 .blob::before {
     content: "";
@@ -312,7 +312,7 @@ animation: hop 1.8s ease-in-out infinite;
 .cardsImg {
     width: 400px;
     height: 400px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 50%;
     position: absolute;
     inset: 0;
@@ -433,4 +433,35 @@ ul li a {
     font-size: 1.4rem;
     color: var(--OCLilla);
     margin-top: var(--MidPadding);
+}
+
+.single-case img.case-billede {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 20px;
+    margin-bottom: var(--MaxPadding);
+}
+.container img.case-billede {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 20px;
+    margin-bottom: var(--MaxPadding);
+    justify-content: center;
+    align-items: center;
+}
+.caseContainer{
+    display: flex;
+    gap: 50px;
+}
+@media(max-width: 800px) {
+    .caseContainer {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+@media(max-width: 800px) {
+    .siden {
+        flex-direction: column;
+        gap: 30px;
+    }
 }

@@ -27,10 +27,10 @@
                 </div>
 
                 <div class="case-card">
-                    <h3>
+                   <!-- <h3>
                         <?php the_title(); ?>
                         <span>logo</span>
-                    </h3>
+                    </h3> -->
                 </div>
 
             </a>

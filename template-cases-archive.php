@@ -27,10 +27,10 @@ get_header();
                     <div class="imgBx">
                         <img class="cardsImg" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     </div>
-
+<!--
                     <div class="case-card">
                         <h3><?php the_title(); ?></h3>
-                    </div>
+                    </div>-->
 
                 </a>
 
@@ -40,5 +40,5 @@ get_header();
 
     </div>
 </section>
-
+<?php get_template_part('template-parts/contact'); ?>
 <?php get_footer(); ?>
