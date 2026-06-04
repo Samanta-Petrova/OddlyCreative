@@ -20,10 +20,12 @@ get_header();
 
             while ($cases->have_posts()): $cases->the_post(); ?>
 
-                <a href="<?php the_permalink(); ?>" class="card blob">
+                <a href="<?php the_permalink(); ?>" class="card">
+
+                    <div class="blob"></div>
 
                     <div class="imgBx">
-                        <img class="pil-ikon" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                        <img class="cardsImg" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     </div>
 
                     <div class="case-card">

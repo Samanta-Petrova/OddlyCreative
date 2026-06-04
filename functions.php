@@ -44,4 +44,4 @@ function oddly_scripts() {
         true // loader i footer
     );
 }
-add_action('wp_enqueue_scripts', 'oddly_scripts');
+

@@ -277,8 +277,8 @@ animation: hop 1.8s ease-in-out infinite;
 
 
 .imgBx img {
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 400px;
     object-fit: fill;
     border-radius: 50%;
     position: absolute;
@@ -286,7 +286,7 @@ animation: hop 1.8s ease-in-out infinite;
     z-index: 1;
 }
 .blob {
-    width: 700px;
+    width: 400px;
     aspect-ratio: 1;
 }
 
@@ -310,8 +310,8 @@ animation: hop 1.8s ease-in-out infinite;
 }
 
 .cardsImg {
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
@@ -377,11 +377,7 @@ padding: 14px 60px;
     font-size: 15px;
 }
 
-ul{
-   list-style: none;
-   padding-top: var(--MaxPadding);
-  gap: 50px;
-}
+
 
 ul li {
    display: inline;
@@ -393,56 +389,48 @@ ul li a {
    font-size: 90px;
    font-weight: 500;
 }
-.kontakt-container {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-}
-.losninger-section {
-    padding: 80px 0;
+
+.losninger-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--GigaPadding);
+    padding-top: var(--GigaPadding);
 }
 
-.losninger-intro {
-    max-width: 700px;
-    margin-bottom: 40px;
+.losning-card {
+    background: var(--OCLightBlue);
+    padding: var(--MaxPadding);
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
-.karusel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
+.losning-card h3 {
+    font-size: var(--h3Tekst);
+    font-weight: 700;
+    margin-bottom: var(--MidPadding);
 }
 
-.karusel-track {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    transition: transform 0.4s ease;
+.losning-card h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--OCLilla);
+    margin-bottom: var(--MidPadding);
+}
+.losning-liste {
+    padding-left: 30px;
+}
+.losning-liste li {
+    display: list-item;
+    list-style-type: disc;
+    padding-left: 0;
+    margin-bottom: 10px;
+    font-size: var(--Ptekst);
+    padding-top: 10px;
 }
 
-.karusel-slide {
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.karusel-slide-content {
-    max-width: 600px;
-    text-align: center;
-}
-
-.karusel-btn {
-    background: var(--OCLilla);
-    color: #fff;
-    border: none;
-    padding: 14px 20px;
-    font-size: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.karusel-btn:hover {
-    background: var(--OCBlue);
+.pris {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--OCLilla);
+    margin-top: var(--MidPadding);
 }
