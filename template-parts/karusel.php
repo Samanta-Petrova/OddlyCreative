@@ -11,7 +11,7 @@
         <!-- GRID -->
         <div class="losninger-grid">
 
-            <!-- ⭐ CARD 1 ⭐ -->
+            <!--  CARD 1  -->
             <div class="losning-card">
                 <h2><?php the_field('slide1_overskrift'); ?></h2>
                 <p><?php the_field('slide1_tekst_1'); ?></p>
@@ -50,7 +50,7 @@
             </div>
 
 
-            <!-- ⭐ CARD 2 ⭐ -->
+            <!--  CARD 2  -->
             <div class="losning-card">
                 <h2><?php the_field('slide2_overskrift_'); ?></h2>
                 <p><?php the_field('slide2_tekst_1'); ?></p>
@@ -87,7 +87,7 @@
             </div>
 
 
-            <!-- ⭐ CARD 3 ⭐ -->
+            <!-- CARD 3  -->
             <div class="losning-card">
                 <h2><?php the_field('slide3_overskrift'); ?></h2>
                 <p><?php the_field('slide3_tekst_1'); ?></p>

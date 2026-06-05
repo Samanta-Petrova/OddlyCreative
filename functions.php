@@ -41,7 +41,7 @@ function oddly_scripts() {
         get_template_directory_uri() . '/assets/js/karusel.js',
         array(),
         false,
-        true // loader i footer
+        true 
     );
 }
 

@@ -16,7 +16,7 @@ html {
     --MinPadding: 20px;
     --MidPadding: 30px;
     --MaxPadding: 40px;
-    --GigaPadding: 100px;
+    --GigaPadding: 150px;
     --Ptekst: 1.2rem;
     --h1Tekst: 4.5rem;
     --h3Tekst: 1.3rem;
@@ -69,7 +69,7 @@ p {
     font-size: var(--Ptekst);
         line-height: 2.3rem;
         margin-bottom: var(--MidPadding);
-        max-width: 700px;
+        max-width: 800px;
 }
 
 /* Container design */
@@ -92,7 +92,6 @@ p {
 .hero-billede img {
    width: 500px;
    height: 500px;
-   border-radius: 50%;
    object-fit: cover;
    margin-right: var(--GigaPadding);
 }
@@ -187,31 +186,6 @@ animation: hop 1.8s ease-in-out infinite;
     }
 }
 
-
-/* hero animation*/
-/*
-.rainbow-bg {
-    background: linear-gradient(270deg, #fff0f9,#e5f6ff, #ecebff, #f5fbf7, #faf9f3, #fde6e6);
-    background-size: 2000% 30rem;
-    animation: rainbow 20s ease infinite;
-    
-}
-
-@keyframes rainbow {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-*/
-
 /*Intro*/
 .introImg{
     padding-top: var(--MinPadding);
@@ -232,37 +206,6 @@ animation: hop 1.8s ease-in-out infinite;
     padding-bottom: var(--MidPadding);
     justify-content: center;
 }
-/*
-.card{
-    background-color: var(--OCLightBlue);
-    gap: var(--MidPadding);
-    max-width: 700px;
-    height: 350px;
-    padding: var(--MidPadding);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.blob1 {
-    width: 700px;
-    aspect-ratio: 1;
-    background: url("assets/images/kanten.svg") center no-repeat;
-}
-.blob2 {
-    width: 700px;
-    aspect-ratio: 1;
-    background: url("assets/images/kantv2.svg") center  no-repeat;
-}
-.blob3 {
-    width: 700px;
-    aspect-ratio: 1;
-    background: url("assets/images/kantv3.svg") center no-repeat;
-}
-
-*/
 
 .card {
     max-width: 400px;
@@ -455,13 +398,15 @@ ul li a {
 }
 @media(max-width: 800px) {
     .caseContainer {
-        flex-direction: column;
-        gap: 30px;
+                flex-direction: column;
+                gap: 30px;
     }
-}
-@media(max-width: 800px) {
     .siden {
         flex-direction: column;
         gap: 30px;
     }
+}
+.footer-section p {
+    padding: var(--GigaPadding);
+    margin: 0;
 }
